@@ -6,6 +6,8 @@ import processing.core.PGraphics;
 import processing.core.PVector;
 import processing.data.XML;
 import processing.data.StringDict;
+//https://github.com/linux-man/ptmx
+//linux-mans ptmx code
 
 public class Ptmx {
   private PApplet parent;

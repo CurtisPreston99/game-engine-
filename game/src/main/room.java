@@ -11,6 +11,7 @@ public class room {
 		for(entity e: entitys) {
 			e.draw();
 		}
+		
 	}
 	
 	

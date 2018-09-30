@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tileset name="Desert" tilewidth="32" tileheight="32" spacing="1" margin="1" tilecount="48" columns="8">
- <image source="tmw_desert_spacing.png" width="265" height="199"/>
+ <image source="/home/wizord/github/game-engine-/game/src/main/data/tmw_desert_spacing.png" width="265" height="199"/>
  <terraintypes>
   <terrain name="Desert" tile="29"/>
   <terrain name="Brick" tile="9"/>
