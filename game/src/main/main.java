@@ -1,15 +1,15 @@
 package main;
 
-import java.util.BitSet;
 
+import entitys.player;
 import processing.core.PApplet;
 import tiled.Ptmx;
 
 public class main extends PApplet{
+	player p = new player(10,10,10,10,this);
 	float x,y;
-	Keys keys=new Keys();
-	Ptmx m;
-	world world=new world();
+	Keys keys;
+	world world=new world(this);
 	int f=0;
 	globals global = new globals();
 	public static void main(String[] args) {
@@ -17,9 +17,9 @@ public class main extends PApplet{
 	}
 	
     public void settings(){
-
+    	keys=Keys.getInstance();
     	global.datapath=dataPath("");
-    	m=new Ptmx(this,"map.tmx");
+//    	m=new Ptmx(this,"map.tmx");
 //    	fullScreen();
     	size(700,700);
     }
@@ -29,26 +29,18 @@ public class main extends PApplet{
     }
 
     public void draw(){
+    	background(200);
+    	p.draw();
+    	p.update();
+//    	m.draw(x,y);
     	
-    	m.draw(x,y);
 
-    	if(keys.getKey('w')) {
-    		y=y+1;
-    	}
-    	if(keys.getKey('s')) {
-    		y=y-1;
-    	}
-    	if(keys.getKey('a')) {
-    		x=x+1;
-    	}
-    	if(keys.getKey('d')) {
-    		x=x-1;
-    	}
     }
     
     public void keyPressed() {
     	keys.setKey(key, true);
     }
+    
     public void keyReleased() {
     	keys.setKey(key, false);
     	}

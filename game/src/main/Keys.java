@@ -1,8 +1,11 @@
 package main;
 
 public class Keys {
+	
+	private static Keys single_instance = null; 
+	
 	Boolean[] keys=new Boolean[256];
-	Keys(){
+	public Keys(){
 		for(int i=0;i<256;i++) {
 			keys[i]=false;
 		}
@@ -24,7 +27,7 @@ public class Keys {
 	}
 	
 	
-	void printTrue() {
+	public void printTrue() {
 		for(int i=0;i<256;i++) {
 			if(keys[i]) {
 				System.out.printf("value:%d key:%c pressed:%b \n",i,(char)i,keys[i]);
@@ -32,17 +35,19 @@ public class Keys {
 			}
 		}
 	}
-	void setKey(int i,boolean t) {
+	public void setKey(int i,boolean t) {
 		if(i>0 && i<keys.length) {
 			keys[i]=t;
 		}
 	}
 	
-	void setKey(char c,boolean t) {
+	public void setKey(char c,boolean t) {
+
 		int i=(int)c;
+
 		setKey(i,t);
 	}
-	Boolean getKey(int i) {
+	public Boolean getKey(int i) {
 		if(i>0 && i<keys.length) {
 			return keys[i];
 		}else {
@@ -51,8 +56,16 @@ public class Keys {
 		
 	}
 	
-	Boolean getKey(char c) {
+	public Boolean getKey(char c) {
 		int i=(int)c;
 		return getKey(i);
 	}
+	
+	public static Keys getInstance() 
+    { 
+        if (single_instance == null) {
+            single_instance = new Keys(); 
+        }
+        return single_instance; 
+    } 
 }
