@@ -43,6 +43,9 @@ public abstract class entity {
 	}
 	
 	abstract public Boolean colide(entity e);
+
+	public abstract void update(int xoff, int yoff);
+	
 	
 	
 	

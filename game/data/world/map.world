@@ -1,19 +1,11 @@
 {
-    "maps": [
+    "patterns": [
         {
-            "fileName": "0_0.tmx",
-            "x": 0,
-            "y": 0
-        },
-        {
-            "fileName": "0_1.tmx",
-            "x": 0,
-            "y": 3200
-        },
-        {
-            "fileName": "1_0.tmx",
-            "x": 3200,
-            "y": 0
+            "regexp": "(\\d+)_(\\d+).tmx",
+            "multiplierX": 3200,
+            "multiplierY": 3200,
+            "offsetX": 0,
+            "offsetY": 0
         }
     ],
     "type": "world"
