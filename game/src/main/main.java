@@ -1,8 +1,11 @@
 package main;
 
 
-import entitys.player;
+import java.util.Timer;
+import java.util.TimerTask;
+
 import entitys.talknpc;
+import player.player;
 import processing.core.PApplet;
 import sprite.sprite;
 
@@ -18,7 +21,6 @@ public class main extends PApplet{
 	}
 	
     public void settings(){
-    	
     	world=new world(this);
     	keys=Keys.getInstance();
     	global=globals.getInstance();
@@ -34,7 +36,8 @@ public class main extends PApplet{
     }
 
     public void setup(){
-    	
+    	frameRate(60);
+
     }
 
     public void draw(){
@@ -42,9 +45,14 @@ public class main extends PApplet{
     	surface.setTitle("gamename");
 
     	background(200);
-
     	world.draw();
+    	update();
     	p.draw();
+
+    	thread("update");
+    }
+    
+    public void update() {
     	p.update();
     	world.update();
     }

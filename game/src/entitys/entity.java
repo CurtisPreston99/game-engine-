@@ -3,11 +3,14 @@ package entitys;
 import processing.core.PApplet;
 
 public abstract class entity {
-	PApplet canvas;
-	int x,y;
-	int width,height;
 	
-	entity(int x,int y,int width,int height,PApplet c){
+
+	protected PApplet canvas;
+	protected int x;
+	protected int y;
+	protected int width,height;
+	
+	public entity(int x,int y,int width,int height,PApplet c){
 		this.x=x;
 		this.y=y;
 		this.width=width;

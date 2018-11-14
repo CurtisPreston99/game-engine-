@@ -19,6 +19,7 @@ public class globals {
 	public int px;
 	public int py;
 	public Keys keys = Keys.getInstance();
+	
 	public static globals getInstance(){ 
         if (single_instance == null) {
             single_instance = new globals(); 

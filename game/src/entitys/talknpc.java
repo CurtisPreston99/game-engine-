@@ -47,6 +47,7 @@ public class talknpc extends entity {
 				
 			}
 		if(global.keys.getKey(key) && overhead) {
+			talk=new dialogsystem(dialog,canvas);
 			global.canWalk=false;
 			talking=true;
 			talk.reset();

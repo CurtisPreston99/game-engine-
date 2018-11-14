@@ -1,5 +1,6 @@
-package entitys;
+package player;
 
+import entitys.entity;
 import main.Keys;
 import main.globals;
 import processing.core.PApplet;

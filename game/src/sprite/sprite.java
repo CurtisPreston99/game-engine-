@@ -27,12 +27,12 @@ public class sprite {
 	
 	public void load() {
 		List<String> files=global.listfiles(fname,".png");
+		System.out.println(files);
 		for(String s :files) {
 			PImage c=canvas.loadImage(s);
 			frames.add(c);
 		}
 		frameCount=frames.size();
-		
 	}
 	
 	

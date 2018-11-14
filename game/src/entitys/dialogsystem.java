@@ -22,7 +22,6 @@ public class dialogsystem {
 	}
 	
 	void draw() {
-		System.out.println(upto);
 
 		canvas.fill(255,255,255);
 		canvas.rect(0,canvas.height-100,canvas.width,canvas.height);
@@ -40,7 +39,7 @@ public class dialogsystem {
 	void reset() {
 		upto=0;	
 	}
-	
+			
 	void next() {
 		upto++;
 		if(upto>speach.length-1) {
